@@ -10,7 +10,7 @@ nameUnzipped <- "Normales Precipitacion 1981_2010/Normales Precipitacion mensual
 
 download.file(url=url,destfile = paste0(dirData,"/",nameZip))
 unzip(paste0(dirData,"/",nameZip),exdir=dirData)
-rawData<- fread(paste0(dirData,"/",nameUnzipped),data.table = FALSE)
+rawData<- fread(paste0(dirData,"/",nameUnzipped),data.table = FALSE,dec = ".",encoding = "Latin-1")
 
 rawData <- rawData %>%
               na.omit() %>%
