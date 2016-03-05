@@ -2,8 +2,8 @@ name: dataprod-project
 account: jnombela
 server: shinyapps.io
 appId: 86049
-bundleId: 382921
+bundleId: 387672
 url: https://jnombela.shinyapps.io/dataprod-project/
-when: 1456700372.44953
+when: 1457114211.5096
 asMultiple: FALSE
 asStatic: FALSE

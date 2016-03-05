@@ -32,7 +32,7 @@ shinyUI(navbarPage("Weather in Spain. Rain normal levels", id="nav",
                                      selectizeInput("Watersheds", "Watershed:", choices=watersheds, multiple=TRUE)
                               ),
                             hr(),
-                            dataTableOutput("raintable")
+                            DT::dataTableOutput("raintable")
                             
                           )   
                           )

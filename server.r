@@ -5,8 +5,6 @@ library(scales)
 library(dplyr)
 library(DT)
 
-
-
 shinyServer(function(input, output, session) {
   
   ## Interactive Map ###########################################
@@ -39,12 +37,12 @@ shinyServer(function(input, output, session) {
   
   ## Data Explorer ###########################################
 
-  output$raintable <- renderDataTable({
+  output$raintable <- DT::renderDataTable({
     df <- rainData %>%
       filter(
         is.null(input$Provinces) | Province %in% input$Provinces,
         is.null(input$Watersheds) | Watershed %in% input$Watersheds
       ) 
-    datatable(df,style = "bootstrap")
+    DT::datatable(df,style = "bootstrap")
   })
 })
